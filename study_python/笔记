@@ -1,0 +1,2 @@
+#range 函数(start,stop) 从start开始，不包括stop
+range(0,5) 是从 0,1,2,3,4

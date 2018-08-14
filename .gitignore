@@ -1,0 +1,6 @@
+gitlogs/
+venv/
+var/pid
+
+.idea
+*.pyc
