@@ -45,7 +45,9 @@ DaPF5cMM7k3NAiEAss28m/ck9BWBfFVdNjx/vsdFZkx2O9AX9EJWoBSnSgECIQCa
         transdata = {"transtype": 0, "result": 0, "transtime": "2018-09-22 18:41:36", "count": 1, "paytype": 5,
                      "money": 100, "waresid": 231437, "appid": "1809130758960.app.ln", "exorderno": "20180922184116872",
                      "feetype": 0, "transid": "2180922184136725326312529", "cpprivate": "123456"}
-        sign = "cJESzwvvdL4VPHN9oTE5FwOOc5KntYTt + jP5DTxhNELvO4AosdIdY86hcZH3G0gjnm3JN0p0CIlcztjyb16iPU3Dk4 + 2ZCQMq6w09U38 + zihyOh3ZbjF39ckZbm7aN9jFHcD2MRduHG6w9v1d2t4 + sTrJRXIQBgTqHEfBbsUFks ="
+        #sign = "cJESzwvvdL4VPHN9oTE5FwOOc5KntYTt + jP5DTxhNELvO4AosdIdY86hcZH3G0gjnm3JN0p0CIlcztjyb16iPU3Dk4 + 2ZCQMq6w09U38 + zihyOh3ZbjF39ckZbm7aN9jFHcD2MRduHG6w9v1d2t4 + sTrJRXIQBgTqHEfBbsUFks ="
+        sign =     "XNiw2xLEJu1Eft5zslUgqhQQji5PiA003GjSBZHKx8EPHSToW84wBlTRmQ3Y9Jx9fc7haWEGIqSB2bwRG4xLfYvTBLBs3d91iT8DSwrUG7IPn1Ys4Qwb/TopFx+L+vxGh/5EHqDgz9DE/Ao1gMtSyggnhJhxvuDVmszeSbO3O2g="
+        transdata ={"transtype":0,"result":0,"transtime":"2018-09-22 18:40:22","count":1,"paytype":5,"money":100,"waresid":231437,"appid":"1809130758960.app.ln","exorderno":"20180922184002480","feetype":0,"transid":"2180922184021890326300568","cpprivate":"123456"}
         pri_key = rsa.PrivateKey.load_pkcs1(self.private_key_pem)
         signature = rsa.sign(str(transdata), priv_key=pri_key, hash_method='SHA-1')
         key_sign = base64.b64encode(signature)
