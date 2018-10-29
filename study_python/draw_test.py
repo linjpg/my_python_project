@@ -31,10 +31,10 @@ def get_time_stamp():
 if __name__ == '__main__':
     start_time = get_time_stamp()
     times = 0
-    for i in range(250):
+    for i in range(5):
         times =times+1
         draw_test()
-    print(times)
+    print("总次数",times)
     end_time = get_time_stamp()
     pay_time = int(end_time)-int(start_time)
     print("开始时间",start_time)
