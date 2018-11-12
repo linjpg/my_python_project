@@ -170,8 +170,19 @@ def set_data():
     if data != 0:
         print ("000000")
 
+def set_dict():
+    keys = {"game_name", "icon", "sort", "update_url", "folder_name", "game_type", "platform"}
+    for key in keys:
+        #if keys[key] == 1 :
+            print(keys[key])
+def jiequ():
+    str = '1001:100'
+    # print(str[5:])
+    # print(str[str.index(':') + 1:])
+    # s = str.index(':')
+    print(str.split(":")[1])
 
 if __name__ == '__main__':
     # data =[{u'start_num': 0, u'item_id': 1, u'equal_money': 1000000, u'id': 1, u'pond_id': 1, u'putaway_money': 2000000, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 0}, {u'start_num': 0, u'item_id': 2, u'equal_money': 50000, u'id': 2, u'pond_id': 1, u'putaway_money': 100000, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 0}, {u'start_num': 20, u'item_id': 3, u'equal_money': 10000, u'id': 3, u'pond_id': 1, u'putaway_money': 20000, u'daily_limit': 0, u'pond_type': 0, u'dynamic_num': 20}, {u'start_num': 0, u'item_id': 4, u'equal_money': 100000, u'id': 4, u'pond_id': 1, u'putaway_money': 200000, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 0}, {u'start_num': 0, u'item_id': 5, u'equal_money': 50000, u'id': 5, u'pond_id': 1, u'putaway_money': 100000, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 0}, {u'start_num': 0, u'item_id': 6, u'equal_money': 10000, u'id': 6, u'pond_id': 1, u'putaway_money': 20000, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 0}, {u'start_num': 100, u'item_id': 7, u'equal_money': 5000, u'id': 7, u'pond_id': 1, u'putaway_money': 10000, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 100}, {u'start_num': 800, u'item_id': 8, u'equal_money': 1000, u'id': 8, u'pond_id': 1, u'putaway_money': 2000, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 800}, {u'start_num': 5000, u'item_id': 9, u'equal_money': 100, u'id': 9, u'pond_id': 1, u'putaway_money': 200, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 5000}, {u'start_num': 4080, u'item_id': 10, u'equal_money': 1000, u'id': 10, u'pond_id': 1, u'putaway_money': 0, u'daily_limit': -1, u'pond_type': 0, u'dynamic_num': 4080}, {u'start_num': 3, u'item_id': 1, u'equal_money': 1000000, u'id': 11, u'pond_id': 2, u'putaway_money': 2000000, u'daily_limit': 1, u'pond_type': 1, u'dynamic_num': 3}, {u'start_num': 50, u'item_id': 2, u'equal_money': 50000, u'id': 12, u'pond_id': 2, u'putaway_money': 100000, u'daily_limit': 50, u'pond_type': 1, u'dynamic_num': 50}, {u'start_num': 200, u'item_id': 3, u'equal_money': 10000, u'id': 13, u'pond_id': 2, u'putaway_money': 20000, u'daily_limit': 150, u'pond_type': 1, u'dynamic_num': 200}, {u'start_num': 250, u'item_id': 4, u'equal_money': 100000, u'id': 14, u'pond_id': 2, u'putaway_money': 20000, u'daily_limit': -1, u'pond_type': 1, u'dynamic_num': 233}, {u'start_num': 400, u'item_id': 5, u'equal_money': 50000, u'id': 15, u'pond_id': 2, u'putaway_money': 200000, u'daily_limit': -1, u'pond_type': 1, u'dynamic_num': 397}, {u'start_num': 2040, u'item_id': 6, u'equal_money': 10000, u'id': 16, u'pond_id': 2, u'putaway_money': 10000, u'daily_limit': -1, u'pond_type': 1, u'dynamic_num': 1976}, {u'start_num': 3000, u'item_id': 7, u'equal_money': 5000, u'id': 17, u'pond_id': 2, u'putaway_money': 10000, u'daily_limit': -1, u'pond_type': 1, u'dynamic_num': 2900}, {u'start_num': 2000, u'item_id': 8, u'equal_money': 1000, u'id': 18, u'pond_id': 2, u'putaway_money': 2000, u'daily_limit': -1, u'pond_type': 1, u'dynamic_num': 1940}, {u'start_num': 1000, u'item_id': 9, u'equal_money': 100, u'id': 19, u'pond_id': 2, u'putaway_money': 2000, u'daily_limit': -1, u'pond_type': 1, u'dynamic_num': 962}, {u'start_num': 1057, u'item_id': 10, u'equal_money': 0, u'id': 20, u'pond_id': 2, u'putaway_money': 0, u'daily_limit': -1, u'pond_type': 1, u'dynamic_num': 1009}]
 
-    set_data()
+    jiequ()

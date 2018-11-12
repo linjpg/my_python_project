@@ -6,6 +6,8 @@
 # @File    : sort.py
 # @Software: PyCharm
 # @Desc
+import json
+
 import redis
 
 from utils.redis import RedisConfig
@@ -31,5 +33,24 @@ def inti_shop_tab():
     #print(redis.get('hello'))
 
 
+def lottery_update_white(uid, status):
+    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    white_key = 'lx_key'
+    data = r.get(white_key)
+    # 1添加
+    list = []
+    if data:
+        list = json.loads(data)
+        # list = data
+    if int(status) == 1:
+        if uid not in list:
+            list.append(uid)
+    else:
+        # 删除
+        if list:
+            list.remove(uid)
+    r.set(white_key, list)
+
+
 if __name__ == '__main__':
-    inti_shop_tab()
+    lottery_update_white(1111, 1)

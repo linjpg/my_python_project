@@ -59,13 +59,16 @@ if __name__ == '__main__':
 # TestUpdate(54036, -99954000, 'gold_coin')
 # TestUpdate(54036, 100000000, 'gold_coin')
 #TestUpdate(54036, 100000000, 'gold_coin')
-TestUpdate(54061, -100000000000000000, 'gold_coin')
-TestUpdate(54061, 100000000, 'gold_coin')
+
+
+TestUpdate(54020, 100000, 'laidou_coin')
+
 #TestUpdate(54067, -2, 'laidou_coin')
 #TestUpdate(16009133, 951300, 'gold_coin')
 # TestUpdate(54009, 99900, 'gold_coin')
 # TestUpdate(54013, 88593, 'gold_coin')
 # TestUpdate(54034, 41300, 'gold_coin')
+
 # TestUpdate(54194, -1662000, 'gold_coin')
 # TestUpdate(54067, -978700, 'gold_coin')
 # TestUpdate(54195, 96500, 'gold_coin')

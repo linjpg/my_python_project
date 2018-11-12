@@ -1,3 +1,4 @@
+import re
 import redis
 import datetime
 import time
@@ -66,27 +67,38 @@ def get_time_stamp_num(data_head):
     return stamp
 
 
-def time_expire():
+def time_expire( timestamp):
     format = '%Y-%m-%d %H:%M:%S'
-    data_head = (datetime.datetime.now() + datetime.timedelta(minutes=-2)).strftime('%Y-%m-%d %H:%M:%S')
-    head_time = int(get_time_stamp_num(data_head))
-    data_head = (datetime.datetime.now() + datetime.timedelta(minutes=-2)).strftime('%Y-%m-%d %H:%M:%S')
-    tail_time = int(get_time_stamp_num(data_head))
-    value = time.localtime(1540553063)
-    dt = time.strftime(format, value)
+    date_after = (datetime.datetime.now() + datetime.timedelta(minutes=120)).strftime('%Y-%m-%d %H:%M:%S')
+    time_after = int(get_time_stamp_num(date_after))
+    data_before = (datetime.datetime.now() + datetime.timedelta(minutes=-120)).strftime('%Y-%m-%d %H:%M:%S')
+    time_before = int(get_time_stamp_num(data_before))
+    parem_time = time.localtime(float(timestamp))
+    dt = time.strftime(format, parem_time)
     c_time = int(get_time_stamp_num(dt))
-    print(head_time)
-    print(c_time)
+    print(c_time,time_before,time_after)
+    #DEBUG_LOG('===============c_time=%s,time_before=%s,time_after=%s' % (c_time, time_before, time_after))
+    if c_time >= time_before and c_time < time_after:
+        return True
+    else:
+        return False
 
 def time_a():
     a = datetime.datetime.now().strftime('%Y-%m-%d')
     print(a)
 
+def week():
+    d = datetime.datetime.now() + datetime.timedelta(days=-2)
+    print(d)
+    d.weekday()
+    print(d.weekday())
+
+
 
 
 if __name__ == '__main__':
-    #time_a()
+    week()
     #timestamp_datetime(1540552067)
     #get_time_stamp()
     #time_expire()
-    time_a()
+    #print(time_expire(1540815458))
