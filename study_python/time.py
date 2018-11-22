@@ -46,13 +46,28 @@ def interval_event(*args, **kw):
     # set_interval(interval_event, 1000 * 60 * 60)
 def cha_time(h=14, m=41):
     now = datetime.datetime.now()
-    print( time.time())
+    # start_time = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d 00:00:00")
+    #
+    # end_time = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d 23:59:59")
+
+    # if now>start_time:
+    #     print("-----------")
+    # if now<end_time:
+    #     print("==========")
+    # print(now)
+    # print("=====", time.time())
+    # print( type(time.time()))
+    # ct = time.time()
+    # local_time = time.localtime(ct)
+    print(int(time.time()))
+    time.sleep(2)
+    print(int(time.time()))
     # DEBUG_LOG('start_time', int(time.time()))
     # DEBUG_LOG("server|time", now.hour, now.minute)
-    if now.hour == h and now.minute == m:
-        start_time = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d 00:00:00")
-        end_time = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d 23:59:59")
-        print(start_time,end_time)
+    # if now.hour == h and now.minute == m:
+    #     start_time = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d 00:00:00")
+    #     end_time = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d 23:59:59")
+    #     print(start_time,end_time)
 
 
 if __name__ == '__main__':

@@ -12,7 +12,9 @@ import redis
 
 from utils.redis import RedisConfig
 
-
+import sys
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 def inti_shop_tab():
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.set('hello','world')
@@ -51,6 +53,40 @@ def lottery_update_white(uid, status):
             list.remove(uid)
     r.set(white_key, list)
 
+def hget_test():
+    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+
+    # keya = 'a'
+    # keyb = 'b'
+    #
+    # r.hset("all",keya,"1")
+    # r.hset("all",keyb,"2")
+    # data = r.hgetall("all")
+    # print(data)
+    # print(len(data))
+    period_record = {}
+    period_record['activity_name'] = '中国'
+    r.set("aa",'重中之重')
+    print(r.get('aa'))
+
+def test():
+    user_count = 0
+    user_list = [54036,54036]
+    uid = 54036
+    user_count_list =[]
+    for u in user_list:
+        if u:
+            if int(u) == int(uid):
+                user_count_list.append(u)
+    print(len(user_count_list))
+
+def is_None(data):
+    if  data!=0 or data == 'None' or data is None:
+        return True
+    else:
+        return False
 
 if __name__ == '__main__':
-    lottery_update_white(1111, 1)
+    # lottery_update_white(1111, 1)
+    test()
+    print(is_None(0))
