@@ -7,6 +7,7 @@
 # @Software: PyCharm
 # @Desc
 import json
+import random
 
 import redis
 
@@ -15,8 +16,10 @@ from utils.redis import RedisConfig
 import sys
 #reload(sys)
 #sys.setdefaultencoding('utf-8')
+from utils.time_util import TimeUtil
+
+r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 def inti_shop_tab():
-    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.set('hello','world')
     tab_list = []
     dict1 = {"id": "1", "name": "道具兑换", "sort": 1}
@@ -54,7 +57,7 @@ def lottery_update_white(uid, status):
     r.set(white_key, list)
 
 def hget_test():
-    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    r = redis.Redis(host='127.0.0.1', password='123123',port=6379, db=0)
 
     # keya = 'a'
     # keyb = 'b'
@@ -86,7 +89,31 @@ def is_None(data):
     else:
         return False
 
+def len_test():
+    user_list = [54036, 54036]
+    uid = 54036
+    key1 = "key1"
+    key2 = "key2"
+    list = json.dumps(user_list)
+    print list
+    r.hset(key1,key2,user_list)
+    data = r.hgetall(key1)
+    print(data)
+    print(len(data))
+
+def test_int():
+    print int(-1)
+
+def test_random():
+    total_user_count = 4
+    now_time = TimeUtil().get_second_time()
+    rand = random.randint(0, total_user_count)
+    if total_user_count != 0:
+        yu_shu = (now_time + rand) % total_user_count
+        luck_number = yu_shu + 10000001
+        print luck_number
+
 if __name__ == '__main__':
     # lottery_update_white(1111, 1)
-    test()
-    print(is_None(0))
+    test_random()
+    #print(is_None(0))
