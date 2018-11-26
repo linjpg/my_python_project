@@ -100,7 +100,12 @@ def get_data(aa):
     k = r.hgetall('a')
     print(k)
 
+def get_rez():
+    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    r.zadd("page_size",10,"baidu")
+    print(r.zcard("a"))
+
 if __name__ == '__main__':
     # lottery_update_white(1111, 1)
     #redis_expire()
-    get_data('aa')
+    get_rez()
