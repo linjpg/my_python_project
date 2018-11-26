@@ -10,7 +10,7 @@ def TestQueryBalance(uid, account_type):
         "account_type": account_type
     }
     print (json.dumps(body))
-    m = requests.post('http://10.55.3.227:22060/coin/BillCoinService/QueryBalance', data=json.dumps(body))
+    m = requests.post('http://47.95.97.139:22060/coin/BillCoinService/QueryBalance', data=json.dumps(body))
     print (json.dumps(m.json()))
 
 
@@ -24,11 +24,11 @@ def TestUpdate(uid, coin, account_type):
         "source_desc": "test",
     }
     # print json.dumps(body)
-    m = requests.post('http://10.55.3.227:22060/coin/BillCoinService/GetBillID', data=json.dumps(body))
+    m = requests.post('http://47.95.97.139:22060/coin/BillCoinService/GetBillID', data=json.dumps(body))
     # print json.dumps(m.json())
     body["bill_id"] = m.json()["bill_id"]
     # print json.dumps(body)
-    m = requests.post('http://10.55.3.227:22060/coin/BillCoinService/UpdateCoin', data=json.dumps(body))
+    m = requests.post('http://47.95.97.139:22060/coin/BillCoinService/UpdateCoin', data=json.dumps(body))
     print (json.dumps(m.json()))
 
 
@@ -61,7 +61,7 @@ if __name__ == '__main__':
 #TestUpdate(54036, 100000000, 'gold_coin')
 
 
-TestUpdate(54020, 100000, 'laidou_coin')
+TestUpdate(54001, 1000, 'laidou_coin')
 
 #TestUpdate(54067, -2, 'laidou_coin')
 #TestUpdate(16009133, 951300, 'gold_coin')

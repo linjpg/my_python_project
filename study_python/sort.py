@@ -86,7 +86,21 @@ def is_None(data):
     else:
         return False
 
+def redis_expire():
+    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    ret = r.set("aa", 1)
+    print(ret)
+    r.expire('aa', 10)
+def get_data(aa):
+    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    print(r.get(aa))
+    list = ['a','b']
+    r.hset('a','b',list)
+    r.hset('a','c',1)
+    k = r.hgetall('a')
+    print(k)
+
 if __name__ == '__main__':
     # lottery_update_white(1111, 1)
-    test()
-    print(is_None(0))
+    #redis_expire()
+    get_data('aa')
