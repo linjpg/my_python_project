@@ -61,7 +61,7 @@ if __name__ == '__main__':
 #TestUpdate(54036, 100000000, 'gold_coin')
 
 
-TestUpdate(54036, 10000, 'laidou_coin')
+TestUpdate(53993, 10000000, 'gold_coin')
 
 #TestUpdate(54067, -2, 'laidou_coin')
 #TestUpdate(16009133, 951300, 'gold_coin')

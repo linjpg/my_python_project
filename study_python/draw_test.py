@@ -31,7 +31,7 @@ def get_time_stamp():
 if __name__ == '__main__':
     start_time = get_time_stamp()
     times = 0
-    for i in range(5):
+    for i in range(800):
         times =times+1
         draw_test()
     print("总次数",times)
